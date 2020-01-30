@@ -8,22 +8,7 @@
 
         <link rel="stylesheet" type="text/css" href="react/assets/css/styles.css">
 
-        <script type="text/javascript">
-            windows.addEventListener("load", function(){
-                var template = document.getElementById("article-template");
-                var articles = document.getElementById("articles")
-
-                for(var i = 1; i <= 5; i++){
-                    var clonado = template.cloneNode(true);
-                    clonado.removeAttribute("id");
-
-                    var h2= clonado.getElementsByTagName("h2")[0];
-                    h2.innerHTML = h2.textContent + ' ' + i;
-
-                    articles.appendChild(clonado);      
-                }
-            });            
-        </script>
+        
     </head>
     <body>
         <h1></h1>
@@ -64,30 +49,38 @@
                 </div>                
             </Header>
 
-            <div id="slider" class="slider-big">
-                <h1>Bienvendido al master de React</h1>
-                <a href="#" class="btn-white"> Ir al blog</a>
-            </div>
 
             <div class="center">
                 <section id="content">
-                    <h2 calss="subheader">Últimos artículos</h2>                    
-                    <!-- Listado artículos -->
-                    <div id="articles">
-                        <article class="article-item" id="article-template">
-                            <div class="image-wrap">
-                                <img src="https://www.blogdefotografia.tucamara.cl/wp-content/uploads/2017/12/fotografia-de-paisaje-1-900x450.jpg" alt="Paisaje" />
+                        <h1 class="subheader">Formulario</h1>
+
+                        <form class="mid-form">
+                            <div class ="form-group">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" name="nombre" />
                             </div>
-                                <h2>Artículo de prueba</h2>
-                                <spam class="date">
-                                    hace 5 minutos
-                                </spam>
-                                <a href="#">Leer más</a>
-                                
-                                <div class="clearfix"></div>
-                        </article>
-                        <!--AÑADIR ARTICULOS VIA JS-->
-                    </div>
+
+                            <div class ="form-group">
+                                <label for="Apellidos">Apellidos</label>
+                                <input type="text" name="Apellidos" />
+                            </div>
+
+                            <div class ="form-group">
+                                <label for="bio">Biografía</label>
+                                <textarea name="bio"></textarea>
+                            </div>
+
+                            <div class ="form-group radiobuttons">
+                                <input type="radio" name="genero" value="hombre" />Hombre
+                                <input type="radio" name="genero" value="mujer" />Mujer
+                                <input type="radio" name="genero" value="otro" />Otro
+                            </div>
+
+                            <div class="clearfix"></div>
+
+                            <input type="submit" value="Enviar" class="btn btn-success">
+                        </form>
+
                 </section>                
 
                 <aside id="sidebar">

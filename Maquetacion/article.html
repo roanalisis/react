@@ -8,22 +8,7 @@
 
         <link rel="stylesheet" type="text/css" href="react/assets/css/styles.css">
 
-        <script type="text/javascript">
-            windows.addEventListener("load", function(){
-                var template = document.getElementById("article-template");
-                var articles = document.getElementById("articles")
-
-                for(var i = 1; i <= 5; i++){
-                    var clonado = template.cloneNode(true);
-                    clonado.removeAttribute("id");
-
-                    var h2= clonado.getElementsByTagName("h2")[0];
-                    h2.innerHTML = h2.textContent + ' ' + i;
-
-                    articles.appendChild(clonado);      
-                }
-            });            
-        </script>
+        
     </head>
     <body>
         <h1></h1>
@@ -64,30 +49,30 @@
                 </div>                
             </Header>
 
-            <div id="slider" class="slider-big">
-                <h1>Bienvendido al master de React</h1>
-                <a href="#" class="btn-white"> Ir al blog</a>
-            </div>
 
             <div class="center">
                 <section id="content">
-                    <h2 calss="subheader">Últimos artículos</h2>                    
-                    <!-- Listado artículos -->
-                    <div id="articles">
-                        <article class="article-item" id="article-template">
+                        <article class="article-item article-detail">
                             <div class="image-wrap">
                                 <img src="https://www.blogdefotografia.tucamara.cl/wp-content/uploads/2017/12/fotografia-de-paisaje-1-900x450.jpg" alt="Paisaje" />
                             </div>
-                                <h2>Artículo de prueba</h2>
+                                <h1 class="subheader">Artículo de prueba</h1>
                                 <spam class="date">
                                     hace 5 minutos
                                 </spam>
-                                <a href="#">Leer más</a>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin congue libero ligula, nec dapibus sapien porttitor sit amet. Vestibulum lacinia consequat magna eu bibendum. Phasellus justo lacus, euismod eu gravida eu, auctor non risus. Pellentesque enim nisl, vulputate a luctus id, sodales ac lectus. Phasellus tortor ante, vehicula eu mauris in, imperdiet suscipit lorem. Duis ac rhoncus lectus, vitae finibus augue. Aliquam feugiat eleifend lorem, ac bibendum massa lobortis sed. Aenean id congue nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus a finibus tortor, ac egestas justo. Morbi sit amet fermentum diam, non efficitur odio. Vivamus feugiat dolor nec elit finibus aliquet. Morbi sit amet nisi sed urna molestie placerat. Maecenas ultrices nibh et tellus tempus, a finibus orci sodales. Aliquam erat volutpat. Nulla convallis quam suscipit massa ullamcorper malesuada.
+                                </p>
+                                <p>
+                                    Duis at malesuada nisl. Nam turpis sem, sollicitudin non nibh sit amet, dignissim dictum lacus. Ut placerat diam ligula, eu ullamcorper odio tempus interdum. Donec ac maximus velit, nec placerat arcu. Integer vitae lorem vehicula, suscipit diam pellentesque, sollicitudin sem. Ut sollicitudin ipsum eleifend enim suscipit, ut aliquam elit fermentum. Pellentesque dignissim in tellus id condimentum. Aenean ut ante est. Pellentesque cursus tempus orci, at dictum dui convallis id. Nam et orci malesuada, molestie erat et, iaculis leo. Praesent porttitor neque ut lorem consequat pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi et massa ligula. Mauris ut nisi nibh. Curabitur semper commodo gravida. Nulla imperdiet bibendum condimentum.
+                                </p>
+                                <p>
+                                    Quisque vehicula risus ac luctus cursus. Sed scelerisque tincidunt efficitur. Sed lacinia tincidunt urna, vel volutpat nisi varius ut. Morbi sit amet ligula purus. Aenean nec metus diam. Sed convallis ante ac est dapibus, sed ultricies quam tristique. Pellentesque ornare turpis eget placerat posuere. Morbi feugiat posuere libero, vitae feugiat leo eleifend vitae. Nullam eget placerat justo. Etiam bibendum at neque in fermentum. Vestibulum at massa nisi. Nam porta ut neque vel semper. Nulla sit amet ante et nibh luctus pharetra. In eget sodales mauris. In ipsum mi, hendrerit et pellentesque condimentum, hendrerit in erat. Curabitur sit amet lectus neque.
+                                </p>                                
                                 
                                 <div class="clearfix"></div>
                         </article>
-                        <!--AÑADIR ARTICULOS VIA JS-->
-                    </div>
+
                 </section>                
 
                 <aside id="sidebar">
